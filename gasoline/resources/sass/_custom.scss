@@ -1,0 +1,46 @@
+.quote {
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+    margin: auto;
+}
+
+.box1 {
+    margin: auto;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(248, 248, 63);
+}
+
+.bgImage {
+    width: 100%;
+}
+
+.email {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    float: left;
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
+.rights {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    float: right;
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+.textbox {
+    margin: auto;
+    box-sizing: content-box;
+    width: 100%;
+    height: 65px;
+    background-color: rgb(126, 120, 120);
+}
