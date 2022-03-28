@@ -1,4 +1,4 @@
-body {
+#body-main {
     background-image: url("/storage/Rafineria-6.jpg");
     background-size: cover;
 }
@@ -162,4 +162,9 @@ body {
 #rights {
     float: right;
     margin-right: 10px;
+}
+
+#body-gasoline {
+    background-image: url('/storage/Rafineria-.jpg');
+    background-size: cover;
 }

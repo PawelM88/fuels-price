@@ -10,4 +10,10 @@ class GasolinesController extends Controller
     {
         return view('gasoline.index');
     }
+
+    public function gasoline()
+    {
+        return view('gasoline.gasoline');
+    }
+
 }
