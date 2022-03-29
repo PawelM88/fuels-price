@@ -1,9 +1,9 @@
-<div class="textbox">
-    <p class="email">
-        email:mlynarczyk-p@wp.pl
-    </p>
-    <p class="rights">
+<div id="footer">
+    <h3 id="email">
+        email: mlynarczyk-p@wp.pl
+    </h3>
+    <h3 id="rights">
         All Rights Reserved &copy; Paweł Młynarczyk 2022
-    </p>
+    </h3>
+    <div style="clear: both"></div>
 </div>
-<div style="clear: both;"></div>

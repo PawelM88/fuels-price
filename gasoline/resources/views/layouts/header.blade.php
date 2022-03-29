@@ -1,5 +1,5 @@
-<div class="box1">
-    <blockquote cite="Edward Abbey" class="quote">
+<div id="header">
+    <blockquote cite="Edward Abbey" id="quote">
         “Our culture runs on coffee and gasoline, the first often tasting like the second.” ― Edward Abbey, Down the
         River
     </blockquote>

@@ -11,11 +11,11 @@
 
 <body>
 
-    @include('layouts.navbar')
+    @include('inc.navbar')
 
     <header>
 
-        @include('layouts.header')
+        @yield('layouts.header')
 
     </header>
 
