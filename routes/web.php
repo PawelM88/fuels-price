@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\GasolinesController;
+use App\Http\Controllers\FuelsController;
+use App\Http\Controllers\PetrolsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [GasolinesController::class, 'index']);
-Route::get('/gasoline', [GasolinesController::class, 'gasoline']);
+//Below route for the index only
+Route::get('/', [FuelsController::class, 'index']);
+
+////Below route for petrol resource
+Route::resource('/petrol', PetrolsController::class);
+
+
