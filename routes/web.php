@@ -15,10 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Below route for the index only
+//Below route for the Main index only
 Route::get('/', [FuelsController::class, 'index']);
 
 ////Below route for petrol resource
+Route::get('/petrol/index', [PetrolsController::class, 'index']);
 Route::resource('/petrol', PetrolsController::class);
 
 
