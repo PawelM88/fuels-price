@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <body id="body-petrol">
-        <h1 id="h1-petrol">
-            Petrol Price
+    <body id="body-petrol-create">
+        <h1 class="h1-fuels">
+            Petrol Costs
         </h1>
 
         {{-- A brief introduction to what influences the price of petrol --}}

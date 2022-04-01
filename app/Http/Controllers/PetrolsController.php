@@ -4,15 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\petrols;
+use App\Models\constant_costs;
 use App\Http\Requests\ValidationRequest;
+
 
 class PetrolsController extends Controller
 {
     public function index()
     {
         $petrols = petrols::all();
+        $constantCosts = constant_costs::all();
 
-        return view('petrol.index')->with('petrols', $petrols);;
+        return view('petrol.index', compact('petrols', 'constantCosts'));
     }
 
     /**

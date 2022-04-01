@@ -164,12 +164,12 @@
     margin-right: 10px;
 }
 
-#body-petrol {
+#body-petrol-create {
     background-image: url('/storage/Rafineria-5.jpg');
     background-size: cover;
 }
 
-#h1-petrol {
+.h1-fuels {
     text-align: center;
     font-size: 75px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -260,4 +260,103 @@ a:hover {
     font-size: xx-large;
     font-weight: bold;
     list-style: none;
+}
+
+#body-petrol-create {
+    background-image: url('/storage/Rafineria-5.jpg');
+    background-size: cover;
+}
+
+#body-petrol-index {
+    background-image: url('/storage/Rafineria-.jpg');
+    background-size: cover;
+}
+
+#constant-costs-title {
+    float: left;
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#user-costs-title {
+    float: right;
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.table-costs {
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+    margin-left: 30px;
+    margin-bottom: 100px;
+}
+
+#petrol-table-costs {
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+    margin-left: 30px;
+    border-spacing: 30px;
+    border-collapse: separate;
+}
+
+#constant-costs-name {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.table-border {
+    border-width: 0;
+    font-size: 20px;
+}
+
+.constant-costs-value {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#canister {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+#petrol-oil-variables {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    color: crimson;
+}
+
+#petrol-pln-variables {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}
+
+#petrol-vat-variables {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: right;
+    color: blue;
 }

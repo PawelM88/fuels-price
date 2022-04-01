@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('constant_costs', function (Blueprint $table) {
             $table->id();
-            $table->char('cost name');
-            $table->string('cost description');
-            $table->float('amount of cost');
+            $table->char('cost_name');
+            $table->string('cost_description');
+            $table->decimal('amount_of_cost', $precision = 10, $scale = 5);
         });
     }
 
