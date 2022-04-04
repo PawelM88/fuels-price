@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\petrols;
 use App\Models\constant_costs;
 use App\Http\Requests\ValidationRequest;
+use Illuminate\Support\Facades\DB;
 
 
 class PetrolsController extends Controller
@@ -55,9 +56,7 @@ class PetrolsController extends Controller
      */
     public function show($id)
     {
-        // $petrols = petrols::find($id);
-
-        // return view('petrol.show')->with('petrols', $petrols);
+        // 
     }
 
     /**
@@ -80,9 +79,18 @@ class PetrolsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ValidationRequest $request, $id)
     {
-        //
+        $request->validated();
+
+        $petrols = petrols::where('id', $id)
+            ->update([
+                'oil_value' => $request->input('oil'),
+                'pln_value' => $request->input('pln'),
+                'vat_value' => $request->input('vat')
+            ]);
+
+        return redirect('/petrol/index');
     }
 
     /**
@@ -94,5 +102,17 @@ class PetrolsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function result()
+    {
+        $petrols = DB::table('petrols')
+        ->join('constant_costs', 'id', '=', 'constant_costs.id')
+        ->select('id*', 'constant_costs.id')
+        ->get();
+
+            return view('petrol.result')->with('petrols', $petrols);
+
+        // return view('petrol.result', compact('petrols', 'constantCosts'));
     }
 }

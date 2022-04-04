@@ -20,6 +20,7 @@ Route::get('/', [FuelsController::class, 'index']);
 
 ////Below route for petrol resource
 Route::get('/petrol/index', [PetrolsController::class, 'index']);
+Route::get('/petrol/result', [PetrolsController::class, 'result']);
 Route::resource('/petrol', PetrolsController::class);
 
 

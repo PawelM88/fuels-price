@@ -2,6 +2,8 @@
 
 @section('content')
 
+    {{-- Page Title --}}
+
     <body id="body-petrol-create">
         <h1 class="h1-fuels">
             Petrol Costs
@@ -54,7 +56,7 @@
         </p>
 
         {{-- The form in which user should enter three changing factors affecting the price of petrol --}}
-        <form action="/petrol" method="POST" id="petrol-form">
+        <form action="/petrol" method="POST" id="petrol-form-create">
             @csrf
             <div class="input-group mb-3">
                 <span class="input-group-text">Crude Oil Price</span>
