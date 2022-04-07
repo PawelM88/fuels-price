@@ -11353,7 +11353,8 @@ textarea.form-control-lg {
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
-  margin-right: 180px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .button-1:active,
@@ -11815,5 +11816,52 @@ a:hover {
 
 #button-edit-submit {
   padding-left: 33%;
+  margin-bottom: 5%;
+  font-family: open sans;
+}
+
+#body-petrol-result {
+  background-image: url("/storage/Rafineria-.jpg");
+  background-size: cover;
+}
+
+#image-result {
+  text-align: center;
+  width: 25%;
+  margin-left: 13%;
+  margin-top: 3%;
+  box-sizing: border-box;
+}
+
+#petrol-price {
+  float: right;
+  text-align: center;
+  margin-right: 9%;
+  margin-top: 3%;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 200px;
+}
+
+.button-delete {
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 10%;
+}
+
+#result-description {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  margin-top: 8%;
+}
+
+#formula-developer {
+  text-align: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  margin-top: 10%;
+  margin-right: 10px;
+  margin-left: 50%;
   margin-bottom: 5%;
 }

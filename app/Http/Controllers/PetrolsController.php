@@ -97,11 +97,13 @@ class PetrolsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(petrols $petrols, $id)
     {
-        //
+        $petrols = petrols::where('id', $id)->delete();
+        return redirect('/');
     }
 
+    //Display estimated petrol price
     public function result()
     {
         $petrols = petrols::all();

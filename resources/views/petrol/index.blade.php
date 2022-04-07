@@ -80,7 +80,7 @@
             Did you make a mistake while entering the variable costs of the petrol price?
         </h3>
 
-        {{-- button for a link to the page where use can edit his data --}}
+        {{-- button for a link to the page where user can edit his data --}}
         @foreach ($petrols as $petrol)
             <div id="button-edit-petrol-display">
                 <a href="/petrol/{{ $petrol->id }}/edit" id="button-edit-petrol">

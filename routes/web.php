@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\Route;
 //Below route for the Main index only
 Route::get('/', [FuelsController::class, 'index']);
 
-////Below route for petrol resource
+////Below route for petrol
 Route::get('/petrol/index', [PetrolsController::class, 'index']);
 Route::get('/petrol/result', [PetrolsController::class, 'result']);
+Route::delete('/{id}', [PetrolsController::class, 'destroy']);
 Route::resource('/petrol', PetrolsController::class);
 
 
