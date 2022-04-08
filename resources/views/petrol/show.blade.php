@@ -16,7 +16,7 @@
             @endforeach
         </span>
 
-        {{-- button to delete records in table and return to Main Site --}}
+        {{-- Button to delete records in table and return to Main Site --}}
         @foreach ($petrols as $petrol)
             <form action="/ {{ $petrol->id }}" class="button-delete" method="POST">
                 @csrf

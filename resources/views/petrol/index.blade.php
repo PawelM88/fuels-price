@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
     {{-- Page Title --}}
+
     <body id="body-petrol-index">
         <h1 class="h1-fuels">
             Cost Details
@@ -20,27 +20,110 @@
 
         {{-- List o constant petrol costs --}}
         <table class="table-costs">
-            @foreach ($constantCosts as $constantCost)
-                <thead>
-                    <tr>
-                        <th id="constant-costs-name">
-                            {{ $constantCost->cost_name }}
-                        </th>
-                    </tr>
+            <thead>
+                <tr>
+                    <th class="constant-costs-name">
+                        Excise Tax
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="table-border">
+                <tr>
+                    <td>
+                        {{ config('constants.constant_costs.excise_tax_description') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="constant-costs-value">
+                        Value: {{ config('constants.constant_costs.excise_tax_value') }} zł
+                    </td>
+                </tr>
+                <tr>
+                    <th class="constant-costs-name">
+                        Fuel Surcharge
+                    </th>
+                </tr>
                 </thead>
-                <tbody class="table-border">
-                    <tr>
-                        <td>
-                            {{ $constantCost->cost_description }}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="constant-costs-value">
-                            Value: {{ $constantCost->amount_of_cost }} zł
-                        </td>
-                    </tr>
-                </tbody>
-            @endforeach
+            <tbody class="table-border">
+                <tr>
+                    <td>
+                        {{ config('constants.constant_costs.fuel_surcharge_description') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="constant-costs-value">
+                        Value: {{ config('constants.constant_costs.fuel_surcharge_value') }} zł
+                    </td>
+                </tr>
+                <tr>
+                    <th class="constant-costs-name">
+                        Emission Fee
+                    </th>
+                </tr>
+                </thead>
+            <tbody class="table-border">
+                <tr>
+                    <td>
+                        {{ config('constants.constant_costs.emission_fee_description') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="constant-costs-value">
+                        Value: {{ config('constants.constant_costs.emission_fee_value') }} zł
+                    </td>
+                </tr>
+                <tr>
+                    <th class="constant-costs-name">
+                        Transport Cost
+                    </th>
+                </tr>
+                </thead>
+            <tbody class="table-border">
+                <tr>
+                    <td>
+                        {{ config('constants.constant_costs.transport_cost_description') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="constant-costs-value">
+                        Value: {{ config('constants.constant_costs.transport_cost_value') }} zł
+                    </td>
+                </tr>
+                <tr>
+                    <th class="constant-costs-name">
+                        Refinery Margin
+                    </th>
+                </tr>
+                </thead>
+            <tbody class="table-border">
+                <tr>
+                    <td>
+                        {{ config('constants.constant_costs.refinery_margin_description') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="constant-costs-value">
+                        Value: {{ config('constants.constant_costs.refinery_margin_value') }} zł
+                    </td>
+                </tr>
+                <tr>
+                    <th class="constant-costs-name">
+                        Station Margin
+                    </th>
+                </tr>
+                </thead>
+            <tbody class="table-border">
+                <tr>
+                    <td>
+                        {{ config('constants.constant_costs.station_margin_description') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="constant-costs-value">
+                        Value: {{ config('constants.constant_costs.station_margin_value') }} zł
+                    </td>
+                </tr>
+            </tbody>
         </table>
 
         {{-- Image of canister of petrol with the text: Taxes --}}
@@ -72,7 +155,7 @@
         </table>
 
         {{-- button for a link to the page with the result of the petrol price --}}
-        <a href="/petrol/result" class="button-calculate" role="button">
+        <a href="/petrol/show" class="button-calculate" role="button">
             Click here to Calculate
         </a>
 

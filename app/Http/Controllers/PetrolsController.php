@@ -4,17 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\petrols;
-use App\Models\constant_costs;
 use App\Http\Requests\ValidationRequest;
 
 class PetrolsController extends Controller
 {
+
     public function index()
     {
         $petrols = petrols::all();
-        $constantCosts = constant_costs::all();
 
-        return view('petrol.index', compact('petrols', 'constantCosts'));
+        return view('petrol.index')->with('petrols', $petrols);
     }
 
     /**
@@ -54,7 +53,8 @@ class PetrolsController extends Controller
      */
     public function show($id)
     {
-        //
+        $petrols = petrols::all();
+        return view('petrol.show')->with('petrols', $petrols);
     }
 
     /**
@@ -101,12 +101,5 @@ class PetrolsController extends Controller
     {
         $petrols = petrols::where('id', $id)->delete();
         return redirect('/');
-    }
-
-    //Display estimated petrol price
-    public function result()
-    {
-        $petrols = petrols::all();
-        return view('petrol.result')->with('petrols', $petrols);
     }
 }
