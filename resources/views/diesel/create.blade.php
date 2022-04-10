@@ -6,12 +6,12 @@
 
     <body class="body-create">
         <h1 class="h1-fuels">
-            Petrol Costs
+            Diesel Costs
         </h1>
 
-        {{-- A brief introduction to what influences the price of petrol --}}
+        {{-- A brief introduction to what influences the price of diesel --}}
         <p class="create-description">
-            The price of petrol is made up of many factors. They include:
+            The price of diesel is made up of many factors. They include:
         </p>
 
         {{-- Factors influencing the price of petrol --}}
@@ -48,15 +48,15 @@
             </li>
         </ul>
 
-        {{-- Continuation of introduction to what influences the price of petrol and ask to fill in the form --}}
+        {{-- Continuation of introduction to what influences the price of diesel and ask to fill in the form --}}
         <p class="create-description">
             Some of these factors are constant, such as taxes, but some are variable (mainly the price per barrel of oil
             and
             the exchange rate of the Polish zloty). Please fill in the three factors in the form below.
         </p>
 
-        {{-- The form in which user should enter three changing factors affecting the price of petrol --}}
-        <form action="/petrol" method="POST" class="form-create">
+        {{-- The form in which user should enter three changing factors affecting the price of diesel --}}
+        <form action="/diesel" method="POST" class="form-create">
             @csrf
             <div class="input-group mb-3">
                 <span class="input-group-text">Crude Oil Price</span>

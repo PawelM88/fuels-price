@@ -4,12 +4,12 @@
 
     <body class="body-both">
 
-        <a href="/petrol/index" class="edit-button-back">
+        <a href="/diesel/index" class="edit-button-back">
             Go Back
         </a>
 
         {{-- A form where the user can re-enter the required data --}}
-        <form action="/petrol/{{ $petrols->id }}" method="POST" class="form-edit">
+        <form action="/diesel/{{ $diesels->id }}" method="POST" class="form-edit">
             @csrf
             @method('PUT')
 
@@ -23,7 +23,7 @@
                         <span class="input-group-text">
                             Crude Oil Price
                         </span>
-                        <input type="number" step=".01" name="oil" value="{{ $petrols->oil_value }}" min="0" max="1000"
+                        <input type="number" step=".01" name="oil" value="{{ $diesels->oil_value }}" min="0" max="1000"
                             class="form-control form-control">
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="input-edit">
                     <div class="input-group mb-3">
                         <span class="input-group-text">PLN rate</span>
-                        <input type="number" step=".0001" name="pln" value="{{ $petrols->pln_value }}" min="0" max="100"
+                        <input type="number" step=".0001" name="pln" value="{{ $diesels->pln_value }}" min="0" max="100"
                             class="form-control input-width">
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                 <div class="input-edit">
                     <div class="input-group mb-3">
                         <span class="input-group-text">Value of VAT</span>
-                        <input type="number" step=".1" name="vat" value="{{ $petrols->vat_value }}" min="0" max="100"
+                        <input type="number" step=".1" name="vat" value="{{ $diesels->vat_value }}" min="0" max="100"
                             class="form-control input-width">
                     </div>
                 </div>

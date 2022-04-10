@@ -8,7 +8,7 @@
             Cost Details
         </h1>
 
-        {{-- Petrol costs type titles --}}
+        {{-- Diesel costs type titles --}}
         <span>
             <h3 class="constant-costs-title">
                 Constant Costs
@@ -18,7 +18,7 @@
             </h3>
         </span>
 
-        {{-- List o constant petrol costs --}}
+        {{-- List o constant diesel costs --}}
         <table class="table-costs">
             <thead>
                 <tr>
@@ -30,12 +30,12 @@
             <tbody class="table-border">
                 <tr>
                     <td>
-                        {{ config('constants.constant_costs.p_excise_tax_description') }}
+                        {{ config('constants.constant_costs.d_excise_tax_description') }}
                     </td>
                 </tr>
                 <tr>
                     <td class="constant-costs-value">
-                        Value: {{ config('constants.constant_costs.p_excise_tax_value') }} zł
+                        Value: {{ config('constants.constant_costs.d_excise_tax_value') }} zł
                     </td>
                 </tr>
                 <tr>
@@ -47,12 +47,12 @@
             <tbody class="table-border">
                 <tr>
                     <td>
-                        {{ config('constants.constant_costs.p_fuel_surcharge_description') }}
+                        {{ config('constants.constant_costs.d_fuel_surcharge_description') }}
                     </td>
                 </tr>
                 <tr>
                     <td class="constant-costs-value">
-                        Value: {{ config('constants.constant_costs.p_fuel_surcharge_value') }} zł
+                        Value: {{ config('constants.constant_costs.d_fuel_surcharge_value') }} zł
                     </td>
                 </tr>
                 <tr>
@@ -64,12 +64,12 @@
             <tbody class="table-border">
                 <tr>
                     <td>
-                        {{ config('constants.constant_costs.p_emission_fee_description') }}
+                        {{ config('constants.constant_costs.d_emission_fee_description') }}
                     </td>
                 </tr>
                 <tr>
                     <td class="constant-costs-value">
-                        Value: {{ config('constants.constant_costs.p_emission_fee_value') }} zł
+                        Value: {{ config('constants.constant_costs.d_emission_fee_value') }} zł
                     </td>
                 </tr>
                 <tr>
@@ -81,12 +81,12 @@
             <tbody class="table-border">
                 <tr>
                     <td>
-                        {{ config('constants.constant_costs.p_transport_cost_description') }}
+                        {{ config('constants.constant_costs.d_transport_cost_description') }}
                     </td>
                 </tr>
                 <tr>
                     <td class="constant-costs-value">
-                        Value: {{ config('constants.constant_costs.p_transport_cost_value') }} zł
+                        Value: {{ config('constants.constant_costs.d_transport_cost_value') }} zł
                     </td>
                 </tr>
                 <tr>
@@ -98,12 +98,12 @@
             <tbody class="table-border">
                 <tr>
                     <td>
-                        {{ config('constants.constant_costs.p_refinery_margin_description') }}
+                        {{ config('constants.constant_costs.d_refinery_margin_description') }}
                     </td>
                 </tr>
                 <tr>
                     <td class="constant-costs-value">
-                        Value: {{ config('constants.constant_costs.p_refinery_margin_value') }} zł
+                        Value: {{ config('constants.constant_costs.d_refinery_margin_value') }} zł
                     </td>
                 </tr>
                 <tr>
@@ -115,58 +115,58 @@
             <tbody class="table-border">
                 <tr>
                     <td>
-                        {{ config('constants.constant_costs.p_station_margin_description') }}
+                        {{ config('constants.constant_costs.d_station_margin_description') }}
                     </td>
                 </tr>
                 <tr>
                     <td class="constant-costs-value">
-                        Value: {{ config('constants.constant_costs.p_station_margin_value') }} zł
+                        Value: {{ config('constants.constant_costs.d_station_margin_value') }} zł
                     </td>
                 </tr>
             </tbody>
         </table>
 
-        {{-- Image of canister of petrol with the text: Taxes --}}
+        {{-- Image of canister of diesel with the text: Taxes --}}
         <div>
             <img src="/storage/canister.jpg" id="canister">
         </div>
 
-        {{-- List o variable petrol costs - Users data --}}
+        {{-- List o variable diesel costs - Users data --}}
         <table class="index-table-costs">
-            @foreach ($petrols as $petrol)
+            @foreach ($diesels as $diesel)
                 <tbody>
                     <tr class="index-oil-variables">
                         <td>
-                            Price per barrel of oil: {{ $petrol->oil_value }} $
+                            Price per barrel of oil: {{ $diesel->oil_value }} $
                         </td>
                     </tr>
                     <tr class="index-pln-variables">
                         <td>
-                            Exchange rate of the Polish zloty against the US dollar: {{ $petrol->pln_value }} zł
+                            Exchange rate of the Polish zloty against the US dollar: {{ $diesel->pln_value }} zł
                         </td>
                     </tr>
                     <tr>
                         <th class="index-vat-variables">
-                            Amount of VAT Tax: {{ $petrol->vat_value }} %
+                            Amount of VAT Tax: {{ $diesel->vat_value }} %
                         </th>
                     </tr>
                 </tbody>
             @endforeach
         </table>
 
-        {{-- button for a link to the page with the result of the petrol price --}}
-        <a href="/petrol/show" class="button-calculate" role="button">
+        {{-- button for a link to the page with the result of the diesel price --}}
+        <a href="/diesel/show" class="button-calculate" role="button">
             Click here to Calculate
         </a>
 
         <h3 class="edit-costs-question">
-            Did you make a mistake while entering the variable costs of the petrol price?
+            Did you make a mistake while entering the variable costs of the diesel price?
         </h3>
 
         {{-- button for a link to the page where user can edit his data --}}
-        @foreach ($petrols as $petrol)
+        @foreach ($diesels as $diesel)
             <div class="button-edit-display">
-                <a href="/petrol/{{ $petrol->id }}/edit" class="button-edit-index">
+                <a href="/diesel/{{ $diesel->id }}/edit" class="button-edit-index">
                     Click here to edit Your Data
                 </a>
             </div>

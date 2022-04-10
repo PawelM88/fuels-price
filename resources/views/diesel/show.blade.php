@@ -5,20 +5,20 @@
     <body class="body-both">
 
         <h1 class="h1-fuels">
-            Estimated Petrol Price
+            Estimated Diesel Price
         </h1>
 
-        {{-- Image of petrol PB95 and petrol price --}}
+        {{-- Image of Diesel ON and diesel price --}}
         <span>
-            <img src="/storage/pb_95.jpg" class="image-result">
-            @foreach ($petrols as $petrol)
-                <p class="formula-price">{{ $petrol->petrolPrice() }} </p>
+            <img src="/storage/diesel_on.jpg" class="image-result">
+            @foreach ($diesels as $diesel)
+                <p class="formula-price">{{ $diesel->dieselPrice() }} </p>
             @endforeach
         </span>
 
         {{-- Button to delete records in table and return to Main Site --}}
-        @foreach ($petrols as $petrol)
-            <form action="/petrol/ {{ $petrol->id }}" class="button-delete" method="POST">
+        @foreach ($diesels as $diesel)
+            <form action="/diesel/ {{ $diesel->id }}" class="button-delete" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger btn-lg">
@@ -34,9 +34,9 @@
             higher by a few groszy.
         </p>
 
-        {{-- Name and surname of the person who devised the formula for the price of petrol for the purposes of this application --}}
+        {{-- Name and surname of the person who devised the formula for the price of diesel for the purposes of this application --}}
         <p class="formula-developer">
-            For the purposes of this application, the mathematical formula for the price of petrol was developed by Łukasz
+            For the purposes of this application, the mathematical formula for the price of diesel was developed by Łukasz
             Ługowski, MA, University of Economics in Katowice
         </p>
 

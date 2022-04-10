@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FuelsController;
 use App\Http\Controllers\PetrolsController;
+use App\Http\Controllers\DieselsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,10 @@ Route::get('/', [FuelsController::class, 'index']);
 
 ////Below route for petrol
 Route::get('/petrol/index', [PetrolsController::class, 'index']);
-Route::delete('/{id}', [PetrolsController::class, 'destroy']);
 Route::resource('/petrol', PetrolsController::class);
+
+////Below route for diesel
+Route::get('/diesel/index', [DieselsController::class, 'index']);
+Route::resource('/diesel', DieselsController::class);
 
 
