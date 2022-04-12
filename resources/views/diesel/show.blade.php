@@ -10,7 +10,7 @@
 
         {{-- Image of Diesel ON and diesel price --}}
         <span>
-            <img src="/storage/diesel_on.jpg" class="image-result">
+            <img src="/images/diesel_on.jpg" class="image-result">
             @foreach ($diesels as $diesel)
                 <p class="formula-price">{{ $diesel->dieselPrice() }} </p>
             @endforeach

@@ -128,7 +128,7 @@
 
         {{-- Image of canister of diesel with the text: Taxes --}}
         <div>
-            <img src="/storage/canister.jpg" id="canister">
+            <img src="/images/canister.jpg" id="canister">
         </div>
 
         {{-- List o variable diesel costs - Users data --}}
