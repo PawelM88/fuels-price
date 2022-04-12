@@ -10,7 +10,7 @@
 
         {{-- Image of petrol PB95 and petrol price --}}
         <span>
-            <img src="/storage/pb_95.jpg" class="image-result">
+            <img src="/images/pb_95.jpg" class="image-result">
             @foreach ($petrols as $petrol)
                 <p class="formula-price">{{ $petrol->petrolPrice() }} </p>
             @endforeach

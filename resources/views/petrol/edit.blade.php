@@ -16,7 +16,7 @@
             {{-- Oil image and input to enter its price --}}
             <div class="wrapper">
                 <div class="images-edit">
-                    <img src="/storage/crude_oil.jpg" width="200px" height="150px">
+                    <img src="/images/crude_oil.jpg" width="200px" height="150px">
                 </div>
                 <div class="input-edit">
                     <div class="input-group mb-3">
@@ -32,7 +32,7 @@
             {{-- An image of the Polish zloty and input to enter its value --}}
             <div class="wrapper">
                 <div class="images-edit">
-                    <img src="/storage/zloty_and_dolar.jpg" width="200px" height="150px">
+                    <img src="/images/zloty_and_dolar.jpg" width="200px" height="150px">
                 </div>
                 <div class="input-edit">
                     <div class="input-group mb-3">
@@ -46,7 +46,7 @@
             {{-- An image of Vat Tax and input to enter its value --}}
             <div class="wrapper">
                 <div class="images-edit">
-                    <img src="/storage/vat_tax.jpg" width="200px" height="150px">
+                    <img src="/images/vat_tax.jpg" width="200px" height="150px">
                 </div>
                 <div class="input-edit">
                     <div class="input-group mb-3">
